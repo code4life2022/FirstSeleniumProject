@@ -10,6 +10,8 @@ import java.util.*;
 
 public class ExcelUtil {
 
+
+
     private Sheet workSheet;
     private Workbook workBook;
     private  String path;
@@ -30,7 +32,7 @@ public class ExcelUtil {
         }
     }
 
-    public String getCellData(int rowNum, int colNum){
+    public  String getCellData(int rowNum, int colNum){
         Cell cell;
         cell = workSheet.getRow(rowNum).getCell(colNum);
         String cellData = cell.toString();

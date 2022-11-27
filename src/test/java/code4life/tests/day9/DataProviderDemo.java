@@ -42,6 +42,8 @@ WebDriver driver;
                 {"problem_user", "secret_sauce"},
                 {"performance_glitch_user", "Secret_sauce"}
 
+                //hard core
+
 
 
 
