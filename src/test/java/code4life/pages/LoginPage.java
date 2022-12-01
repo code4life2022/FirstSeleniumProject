@@ -3,10 +3,14 @@ package code4life.pages;
 import code4life.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 
 public class LoginPage {
+
 
 
     By username = By.id("user-name");
@@ -14,7 +18,15 @@ public class LoginPage {
     By loginBtn = By.id("login-button");
     By productLabel = By.xpath("//span[text()='Products']");
     By loginErrorText = By.xpath("//h3[text()='Epic sadface: Username and password do not match any user in this service']");
+    By passwordLabel = By.xpath("//h4[text()='Password for all users:']");
 
+
+    public String returnPasswordText() throws IOException {
+       String value =  Driver.getDriver().findElement(passwordLabel).getText();
+
+
+       return value;
+    }
 
     public String returnLoginErrorText() throws IOException {
 
@@ -40,6 +52,7 @@ public class LoginPage {
     public void clickLoginBtn() throws IOException {
         Driver.getDriver().findElement(loginBtn).click();
     }
+
 
 
 }

@@ -23,6 +23,7 @@ public class LoginTest  extends TestBase {
     @Test
     public void loginTest() throws IOException {
         LoginPage page = new LoginPage();
+
         page.sendUserNameText(ConfigurationReader.getValue("user"));
         page.sendPasswordText(ConfigurationReader.getValue("pass"));
         page.clickLoginBtn();
@@ -35,5 +36,7 @@ public class LoginTest  extends TestBase {
 
 
     }
+
+
 
 }
