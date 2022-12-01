@@ -2,6 +2,7 @@ package code4life.tests.day12;
 
 import code4life.Base.ReportTestBase;
 import code4life.pages.ElementsPage;
+import code4life.utilities.BrowserUtils;
 import code4life.utilities.Driver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
@@ -41,13 +42,32 @@ public class TestElements extends ReportTestBase {
     public void verifyTitle () throws IOException {
         ExtentTest test = extent.createTest("Verify Title");
 
-        if (Driver.getDriver().getTitle().equals("ToolsQA")){
+        if (Driver.getDriver().getTitle().equals("ToolsQ")){
             test.pass("test input successfully passed!!!!");
         } else {
-            test.fail("Title verification failed!!!!");
+            test.fail(BrowserUtils.getScreenshot("Title") +"Title verification failed!!!!");
 
         }
 
-        Assert.assertEquals("ToolsQA", Driver.getDriver().getTitle());
+        Assert.assertEquals("ToolsQ", Driver.getDriver().getTitle());
+    }
+
+    @Test
+    public void verifyEmail() throws IOException {
+        ExtentTest test = extent.createTest("Verify email input ");
+
+        e.clickTextBox();
+        e.sendEmailValue();
+        e.clickSubmitBtn();
+
+        String actual ="Email:billgate@outlook.com";
+        String expect = e.returnEmailText();
+        if (actual.equals(expect)){
+            test.pass("email verification is successful");
+        } else {
+            System.out.println("email verification failed!! ");
+        }
+
+        Assert.assertEquals(actual, expect);
     }
 }

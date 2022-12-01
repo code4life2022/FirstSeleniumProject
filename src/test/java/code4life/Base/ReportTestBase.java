@@ -21,7 +21,7 @@ public class ReportTestBase {
         extent = new ExtentReports();
         spark = new ExtentSparkReporter("target/Spark.html");
         extent.attachReporter(spark);
-        spark.config().setTheme(Theme.DARK);
+        spark.config().setTheme(Theme.STANDARD);
         spark.config().setDocumentTitle("MyReport");
 
         Driver.getDriver().manage().window().maximize();
