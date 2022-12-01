@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/code4life/IdeaProjects/FirstSeleniumProject/src/test/java/code4life/tests/day12/TestElements.java">
+        <classes>
+            <class name="code4life.tests.day12.TestElements">
+                <methods>
+                    <include name="verifyTextBoxLabel"/>
+                    <include name="verifyTitle"/>
+                    <include name="verifyEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

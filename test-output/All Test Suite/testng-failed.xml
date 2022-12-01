@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test thread-count="5" name="/Users/code4life/IdeaProjects/FirstSeleniumProject/src/test/java/code4life/tests/day12/TestElements.java(failed)">
+    <classes>
+      <class name="code4life.tests.day12.TestElements">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- code4life.tests.day12.TestElements -->
+    </classes>
+  </test> <!-- /Users/code4life/IdeaProjects/FirstSeleniumProject/src/test/java/code4life/tests/day12/TestElements.java(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
