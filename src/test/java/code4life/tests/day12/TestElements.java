@@ -41,15 +41,15 @@ public class TestElements extends ReportTestBase {
     @Test
     public void verifyTitle () throws IOException {
         ExtentTest test = extent.createTest("Verify Title");
-
-        if (Driver.getDriver().getTitle().equals("ToolsQ")){
+        String actual = "ToolsQA";
+        if (Driver.getDriver().getTitle().equals(actual)){
             test.pass("test input successfully passed!!!!");
         } else {
-            test.fail(BrowserUtils.getScreenshot("Title") +"Title verification failed!!!!");
+            test.fail(BrowserUtils.getScreenshot("Title") +"   Title verification failed!!!!");
 
         }
 
-        Assert.assertEquals("ToolsQ", Driver.getDriver().getTitle());
+        Assert.assertEquals(actual, Driver.getDriver().getTitle());
     }
 
     @Test
