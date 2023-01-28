@@ -36,7 +36,7 @@ public class ActionsDemo {
         System.out.println(" color before drag and drop = " + color);
 
         actions.dragAndDrop(dragMe,dropHere).build().perform();
-        String color2  = dropHere.getCssValue("This is the wrong colo ");
+        String color2  = dropHere.getCssValue("This is the wrong color ");
         System.out.println("color after drag and drop = "+ color2);
         Thread.sleep(3000);
 
