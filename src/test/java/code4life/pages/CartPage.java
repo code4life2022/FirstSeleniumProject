@@ -31,15 +31,18 @@ public class CartPage {
 
     public void clickBike(){
         wait.until(ExpectedConditions.elementToBeClickable(bikeLight)).click();
+          //Driver.getDriver().findElement(backPack).click();
     }
 
     public void clickTShirt(){
 
         wait.until(ExpectedConditions.elementToBeClickable(shirt)).click();
+          //Driver.getDriver().findElement(backPack).click();
     }
 
     public void clickCart(){
         wait.until(ExpectedConditions.elementToBeClickable(cart)).click();
+          //Driver.getDriver().findElement(backPack).click();
     }
 
     public int returnCartItemsNumber() throws IOException {
